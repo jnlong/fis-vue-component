@@ -1,0 +1,42 @@
+├─component vue组件
+│      a.vue
+│      b.vue
+│      c.vue
+│      index.vue
+│      test-bug.vue
+│      test-table.vue
+│      test-td.vue
+│
+├─page 页面
+│      index.html
+│
+└─static 静态文件
+    │  .DS_Store
+    │
+    ├─comm js公共文件
+    │      cookie.js
+    │      gps.js
+    │
+    ├─css css文件
+    │  │  aa.less
+    │  │  index.less
+    │  │  other.less
+    │  │  other2.less
+    │  │  test.scss
+    │  │
+    │  └─base css公共文件
+    │          icon.less
+    │          reset.less
+    │
+    ├─image 图片
+    │      timg.jpg
+    │
+    ├─lib 第三方库
+    │      mod.js
+    │      vue.js
+    │      zepto.js
+    │
+    └─page 页面对应的js
+        │
+        └─index
+                index.js

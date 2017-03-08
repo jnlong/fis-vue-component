@@ -30,7 +30,7 @@
 
 ## 配置
 ###打包配置
-`
+
 	fis.match('::package', {
 	  postpackager: fis.plugin('loader', {
 	    allInOne: {
@@ -38,10 +38,10 @@
 	    }
 	  })
 	});
-`
+
 
 ### less解析
-`
+
 	fis.match('{*.vue:less,*.less}', {
 	  rExt: 'css',
 	  parser: [fis.plugin('less-2.x')],
@@ -51,10 +51,10 @@
 	      "gradientfixer": true
 	  })
 	});
-`
+
 
 ### vue解析
-`
+
 	fis.match('*.vue', {
 	  isMod: true,
 	  rExt: 'js',
@@ -70,12 +70,12 @@
 	    fis.plugin('translate-es3ify', null, 'append')
 	  ]
 	});
-`
+
 
 ## 代码
 ### 编译前-vue文件（a.vue)
 
-`
+
 	<style lang="less">
 	.component-b {
 	  line-height: 50px;
@@ -108,11 +108,11 @@
 	    }
 	  }
 	</script>
-`
+
 
 ### 编译后文件(a.js)
 
-`
+
 	define('component/a.vue', function(require, exports, module) {
 	
 	  module.exports = {
@@ -130,4 +130,48 @@
 	  
 	
 	});
-`
+
+### 代码结构
+
+	├─component vue组件
+	│      a.vue
+	│      b.vue
+	│      c.vue
+	│      index.vue
+	│      test-bug.vue
+	│      test-table.vue
+	│      test-td.vue
+	│
+	├─page 页面
+	│      index.html
+	│
+	└─static 静态文件
+	    │  .DS_Store
+	    │
+	    ├─comm js公共文件
+	    │      cookie.js
+	    │      gps.js
+	    │
+	    ├─css css文件
+	    │  │  aa.less
+	    │  │  index.less
+	    │  │  other.less
+	    │  │  other2.less
+	    │  │  test.scss
+	    │  │
+	    │  └─base css公共文件
+	    │          icon.less
+	    │          reset.less
+	    │
+	    ├─image 图片
+	    │      timg.jpg
+	    │
+	    ├─lib 第三方库
+	    │      mod.js
+	    │      vue.js
+	    │      zepto.js
+	    │
+	    └─page 页面对应的js
+	        │
+	        └─index
+	                index.js
